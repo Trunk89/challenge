@@ -1,6 +1,6 @@
 <div class="word__cloud">
 
-    <span class="word" ng-repeat="topic in topics">
+    <span class="word" ng-repeat="topic in topics" ng-click="selectWord($index)">
         <span class="word__name">{{topic.label}}</span>
     </span>
 

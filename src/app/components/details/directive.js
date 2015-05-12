@@ -7,7 +7,6 @@
         return {
             restrict: 'E',
             replace: true,
-            controller: 'DetailsController',
             template: $templateCache.get(CONFIG.URL.TEMPLATE.DETAILS)
         };
     }]);

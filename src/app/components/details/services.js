@@ -1,53 +1,44 @@
 (function () {
     'use strict';
 
-    //var details = angular.module('details');
+    var details = angular.module('details');
 
     /**
      * @constructor Balance
-     * @memberof wallet
-     * @description Handle balance add/remove validation
+     * @memberof details
+     * @description Creates a word object
      */
-   /* wallet.factory('Balance', [function () {
+    details.factory('Word', ['$rootScope', function ($rootScope) {
         return {
-            /!**
-             * @method remove
-             * @description Handles removing balance from currentBalance
-             * @memberof wallet.Balance
-             * @param {int} amount - amount to be removed from current balance
-             * @param {int} balance - current wallet balance
-             *!/
-            remove: function remove(amount, balance) {
-                var result;
+            /**
+             * @method create
+             * @description Handles creating a new word object by given index
+             * @memberof details.Word
+             * @param {int} index - index of the chosen word
+             */
+            create: function create(index) {
+                var topics = $rootScope.data.topics,
+                    word = {},
+                    sentiment = {};
 
-                amount = parseFloat(amount);
-                balance = parseFloat(balance);
+                if (topics[index]) {
+                    word.label = topics[index].label;
+                    word.volume = topics[index].volume;
 
-                if (balance - amount < 0) {
-                    result = -1;
+                    sentiment.positive = topics[index].sentiment.positive || 0;
+                    sentiment.neutral = topics[index].sentiment.neutral || 0;
+                    sentiment.negative = topics[index].sentiment.negative || 0;
+
+                    word.sentiment = sentiment;
+
+                    word.error = false;
                 } else {
-                    result = balance - amount;
+                    word.error = true;
                 }
 
-                return result;
-            },
-            /!**
-             * @method add
-             * @description Handles adding balance to wallet
-             * @memberof wallet.Balance
-             * @param {int} amount - amount to be added to current balance
-             * @param {int} balance - current wallet balance
-             *!/
-            add: function add(amount, balance) {
-                var result;
-
-                amount = parseFloat(amount);
-                balance = parseFloat(balance);
-                result = amount + balance;
-
-                return result;
+                return word;
             }
         };
-    }]);*/
+    }]);
 
 }());

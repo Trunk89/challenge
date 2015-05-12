@@ -9,7 +9,8 @@
                 templateUrl: CONFIG.URL.ROUTE.MAIN
             }).
             when('/:id', {
-                templateUrl: CONFIG.URL.ROUTE.MAIN
+                templateUrl: CONFIG.URL.ROUTE.MAIN,
+                controller: 'DetailsController'
             }).
             otherwise({
                 redirectTo: '/'

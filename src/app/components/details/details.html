@@ -1,4 +1,7 @@
 <div class="details">
-DETAILS
+    <div ng-if="!word.error"></div>
+    <div ng-if="word.error">
+        {{messages.error}}
+    </div>
 </div>
 
