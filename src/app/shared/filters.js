@@ -17,4 +17,13 @@
         };
     }]);
 
+    formatter.filter('quote', [function() {
+        return function(unformattedType) {
+
+            return ['"', unformattedType, '"'].join('');
+        };
+    }]);
+
+
+
 }());

@@ -1,5 +1,15 @@
 <div class="details">
-    <div ng-if="!word.error"></div>
+    <div ng-if="!word.error">
+        <div><span class="text">{{messages.details.information}}</span><span>{{word.label | quote}}</span></div>
+        <br />
+
+        <div><span class="text">{{messages.details.mentions}}</span><span>{{word.volume}}</span></div>
+        <br />
+
+        <div><span class="text">{{messages.details.positive}}</span><span class="positive">{{word.sentiment.positive}}</span></div>
+        <div><span class="text">{{messages.details.neutral}}</span><span>{{word.sentiment.neutral}}</span></div>
+        <div><span class="text">{{messages.details.negative}}</span><span class="negative">{{word.sentiment.negative}}</span></div>
+    </div>
     <div ng-if="word.error">
         {{messages.error}}
     </div>
