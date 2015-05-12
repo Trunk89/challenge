@@ -1,0 +1,7 @@
+{
+  "ENV": "prod",
+  "ENDPOINT": {
+    "API": "../api/api.json"
+  },
+  "DEBUG": false
+}
