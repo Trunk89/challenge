@@ -1,5 +1,5 @@
 *********************************************************
- INFO - Wallet WebApp
+ INFO - Challenge WebApp
 *********************************************************
 
 ###App is using NodeJS, before continuing make sure it is installed
@@ -23,7 +23,7 @@ Build tool:
 *********************************************************
 
 #RUNNING THE APP:
-Make sure you are inside `wallet` directory and run:
+Make sure you are inside `challenge` directory and run:
 `npm install -g grunt-cli`
 and then 
 `npm install`
@@ -36,7 +36,7 @@ In order to build the app with dev configuration type command:
 
 #RUNNING THE UNIT TESTS:
 
-To run tests by using grunt move to `wallet` and run:
+To run tests by using grunt move to `challenge` and run:
 `grunt karma`
 
 To run tests individually without grunt go `test` directory and run:
@@ -47,7 +47,7 @@ To run tests individually without grunt go `test` directory and run:
 You need to configure your Apache server to serve static assets of webapp.
 Enter the path where you serve the webapp in `baseUrl` of `protractor.conf.js` file before continuing.
 
-To run tests by using grunt move to `wallet` and run:
+To run tests by using grunt move to `challenge` and run:
 `grunt protractor`
 
 To run tests individually without grunt go `test` directory and run:
