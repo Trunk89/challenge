@@ -4,30 +4,31 @@
     var details = angular.module('details');
 
     /**
-     * @constructor Balance
+     * @constructor Word
      * @memberof details
      * @description Creates a word object
      */
-    details.factory('Word', ['$rootScope', function ($rootScope) {
+    details.factory('Word', [function () {
         return {
             /**
              * @method create
              * @description Handles creating a new word object by given index
              * @memberof details.Word
-             * @param {int} index - index of the chosen word
+             * @param {object} topic - topic with word name, popularity and sentiment
+             *      @param {string} label - word name
+             *      @param {string}
              */
-            create: function create(index) {
-                var topics = $rootScope.data.topics,
-                    word = {},
+            create: function create(topic) {
+                var word = {},
                     sentiment = {};
 
-                if (topics[index]) {
-                    word.label = topics[index].label;
-                    word.volume = topics[index].volume;
+                if (topic && topic.label && topic.volume) {
+                    word.label = topic.label;
+                    word.volume = topic.volume;
 
-                    sentiment.positive = topics[index].sentiment.positive || 0;
-                    sentiment.neutral = topics[index].sentiment.neutral || 0;
-                    sentiment.negative = topics[index].sentiment.negative || 0;
+                    sentiment.positive = topic.sentiment.positive || 0;
+                    sentiment.neutral = topic.sentiment.neutral || 0;
+                    sentiment.negative = topic.sentiment.negative || 0;
 
                     word.sentiment = sentiment;
 
@@ -37,6 +38,7 @@
                 }
 
                 return word;
+
             }
         };
     }]);

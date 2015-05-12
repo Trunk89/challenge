@@ -8,9 +8,9 @@
           "mentions": "Total Mentions:",
           "positive": "Positive Mentions:",
           "neutral": "Neutral Mentions:",
-          "negative": "Negative Mentions:"
-      },
-      "error": "Error occurred."
+          "negative": "Negative Mentions:",
+          "error": "Invalid index number."
+      }
   },
   "data": {
     "topics": [
