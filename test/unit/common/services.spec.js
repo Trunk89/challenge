@@ -70,4 +70,25 @@ describe("[common services]", function () {
 
     });
 
+    describe("Messages", function () {
+        var Messages;
+
+        beforeEach(inject(function(_Messages_){
+            Messages = _Messages_;
+        }));
+
+        it('contains an get() method', function() {
+            expect(Messages.get).to.exist;
+        });
+
+        it('get messages object', inject(function(Messages, $rootScope) {
+
+            $rootScope.messages = {message: 'test'};
+            var messages = Messages.get();
+
+            expect(messages).to.be.eql({message: 'test'});
+        }));
+
+    });
+
 });

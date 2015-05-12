@@ -53,4 +53,22 @@
         };
     }]);
 
+    /**
+     * @constructor Messages
+     * @memberof common
+     * @description Handles text messages operations for app
+     */
+    common.factory('Messages', ['$rootScope', function ($rootScope) {
+        return {
+            /**
+             * @method get
+             * @description Returns text messages for app
+             * @memberof common.Messages
+             */
+            get: function get() {
+                return $rootScope.messages;
+            }
+        };
+    }]);
+
 }());

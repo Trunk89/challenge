@@ -5,12 +5,12 @@
       },
       "details": {
           "information": "Information on topic",
-          "mentions": "Total Mentions",
-          "positive": "Positive Mentions",
-          "neutral": "Neutral Mentions",
-          "negative": "Negative Mentions"
-      },
-      "error": "Error occurred"
+          "mentions": "Total Mentions:",
+          "positive": "Positive Mentions:",
+          "neutral": "Neutral Mentions:",
+          "negative": "Negative Mentions:",
+          "error": "Invalid index number."
+      }
   },
   "data": {
     "topics": [
