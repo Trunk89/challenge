@@ -18,7 +18,7 @@
         }
 
         $scope.selectWord = function(id) {
-            Navigation.navigate(id)
+            Navigation.navigate(id);
         };
 
         $log.debug('[challenge] Word Cloud controller ran');
