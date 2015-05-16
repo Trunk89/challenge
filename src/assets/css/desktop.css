@@ -2,6 +2,7 @@
     .word__cloud {
         max-width: 600px;
         float: left;
+        padding: 0;
     }
 
     .details__container {
