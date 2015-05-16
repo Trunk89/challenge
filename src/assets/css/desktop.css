@@ -1,7 +1,12 @@
-@media (min-width: 450px) {
+@media (min-width: 1024px) {
+    .word__cloud {
+        max-width: 600px;
+        float: left;
+    }
 
-}
-
-@media (min-width: 600px) {
-
+    .details__container {
+        max-width: 400px;
+        float: left;
+        padding: 5px 10px;
+    }
 }

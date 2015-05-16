@@ -18,10 +18,9 @@ html, body {
     min-height: 400px;
 }
 
-.ellipsify {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
+.content {
+    max-width: 1024px;
+    margin: 0 auto;
 }
 
 .bold {
@@ -34,4 +33,24 @@ html, body {
 
 .negative {
     color: red;
+}
+
+.smallest__font {
+    font-size: 12px;
+}
+
+.small__font {
+    font-size: 14px;
+}
+
+.large__font {
+    font-size: 18px;
+}
+
+.larger__font {
+    font-size: 20px;
+}
+
+.huge__font {
+    font-size: 22px;
 }

@@ -1,7 +1,16 @@
 <div class="word__cloud">
 
     <span class="word" ng-repeat="topic in topics" ng-click="selectWord($index)">
-        <span class="word__name">{{topic.label}}</span>
+        <span class="word__name" ng-class="{
+                                            smallest__font: topic.volume <= 5,
+                                            small__font: topic.volume <= 10 && topic.volume > 5,
+                                            large__font: topic.volume <= 25 && topic.volume > 10,
+                                            larger__font: topic.volume <= 50 && topic.volume > 25,
+                                            huge__font: topic.volume > 50,
+                                            negative: topic.sentimentScore < 40,
+                                            positive: topic.sentimentScore > 60,
+                                            }">{{topic.label}}</span>
     </span>
 
 </div>
+

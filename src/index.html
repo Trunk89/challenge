@@ -37,8 +37,10 @@
 
 <div class="container">
     <main-header></main-header>
-    <cloud></cloud>
-    <div class="details" ng-view></div>
+    <div class="content">
+        <cloud></cloud>
+        <div class="details__container" ng-view></div>
+    </div>
 </div>
 
 <!-- build:js challenge.min.js -->
@@ -56,10 +58,8 @@
 <script src="app/components/details/directive.js"></script>
 <script src="app/components/details/services.js"></script>
 
-<script src="app/components/word_cloud/controller.js"></script>
 <script src="app/components/word_cloud/directive.js"></script>
 
-<script src="app/components/header/controller.js"></script>
 <script src="app/components/header/directive.js"></script>
 
 <script src="app/app.routes.js"></script>

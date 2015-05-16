@@ -9,7 +9,7 @@
           "positive": "Positive Mentions:",
           "neutral": "Neutral Mentions:",
           "negative": "Negative Mentions:",
-          "error": "Invalid index number."
+          "error": "Word could not be found."
       }
   },
   "data": {
