@@ -32,8 +32,6 @@
                 }
 
                 function load() {
-console.log($sessionStorage);
-                    console.log($sessionStorage.data);
                     if ($sessionStorage && $sessionStorage.data) {
                         var response = {
                             data: {

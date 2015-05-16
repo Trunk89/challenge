@@ -16,7 +16,6 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
         'src/assets/libs/angular.min.js',
-        'src/assets/libs/angular-animate.min.js',
         'src/assets/libs/angular-route.min.js',
         'src/assets/libs/angular-touch.min.js',
         'src/assets/libs/angular-filter.min.js',

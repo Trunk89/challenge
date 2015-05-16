@@ -99,7 +99,6 @@ module.exports = function (grunt) {
             vendor: {
                 src: [
                     '<%= path %>assets/libs/angular.min.js',
-                    '<%= path %>assets/libs/angular-animate.min.js',
                     '<%= path %>assets/libs/angular-route.min.js',
                     '<%= path %>assets/libs/angular-touch.min.js',
                     '<%= path %>assets/libs/angular-filter.min.js',
