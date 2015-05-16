@@ -3,4 +3,6 @@
     width: 100%;
     position: relative;
     min-width: 320px;
+    padding: 15px 10px;
+    margin-bottom: 20px;
 }

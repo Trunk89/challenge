@@ -18,7 +18,7 @@
                     if (!$sessionStorage.data) {
                         $sessionStorage.$default({
                             messages: response.data.messages,
-                            user: response.data.data
+                            data: response.data.data
                         });
                     }
 
@@ -32,12 +32,13 @@
                 }
 
                 function load() {
-
+console.log($sessionStorage);
+                    console.log($sessionStorage.data);
                     if ($sessionStorage && $sessionStorage.data) {
                         var response = {
                             data: {
                                 messages: $sessionStorage.messages,
-                                user: $sessionStorage.data
+                                data: $sessionStorage.data
                             }
                         };
                         fetchData(response);
